@@ -8,7 +8,7 @@ const generateContacts = async (number) => {
     .fill(0)
     .map(() => createFakeContact());
   contactsList.push(...contacts);
-    await fs.writeFile(PATH_DB, JSON.stringify(contactsList, null, 2));
+  await fs.writeFile(PATH_DB, JSON.stringify(contactsList, null, 2));
 };
 
 generateContacts(5);
